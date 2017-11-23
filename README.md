@@ -15,8 +15,8 @@ This is the client for the server <_His Server URL_>. In this client are impleme
 #### 2.1. Code
 The project is structured as follow:
 * __ivy.xml__ : it is used for handling the dependencies
-* __build.xml__ : contains the ant script for run the Project
-* __src__ : contains the two clients (__json__ and __xml__) which perform the tasks describes in the next paragrafs. These classes implement the http requests for the server.
+* __build.xml__ : contains the ant script for running the Project
+* __src__ : contains the two clients (__json__ and __xml__) which perform the tasks described in the next paragrafs. These classes implement the http requests for the server.
 #### 2.2. Task
 The two clients do the following tasks both in __JSON__ and __XML__ :
 * __Step 3.1__. Send (__GET BASE_URL/person__). Calculate how many people are in the response. If more than 4, result is OK, else is ERROR (less than 5 persons). Save into a variable id of the first person (first_person_id) and of the last person (last_person_id)
@@ -34,7 +34,7 @@ The two clients do the following tasks both in __JSON__ and __XML__ :
 Run the following for the execution
 
   ```
-   ant execute.evaluation
+   ant execute.client
   ```
 it will run the program and it will create the __client-server-json.log__ and the __client-server-xml.log__
 ## 4. Additional Notes
