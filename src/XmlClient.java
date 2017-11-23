@@ -292,8 +292,8 @@ public class XmlClient {
 		body = " ";
 		result = strERROR;
 
-		String activity_id = "";
-		String activity_type = "";
+		activity_id = "";
+		activity_type = "";
 		for(String s : acTypesLsit) {
 			result = strOK;
 			String newPath = path + "/" + s;

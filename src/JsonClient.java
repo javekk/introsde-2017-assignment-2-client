@@ -279,8 +279,8 @@ public class JsonClient {
 		body = " ";
 		result = strERROR;
 
-		int activity_id = 1;
-		String activity_type = "";
+		activity_id = 1;
+		activity_type = "";
 		for(String s : acTypesLsit) {
 			result = strOK;
 			String newPath = path + "/" + s;
