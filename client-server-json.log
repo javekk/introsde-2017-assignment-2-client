@@ -1,0 +1,327 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+THE SERVER IS: https://assignsde2.herokuapp.com/assign2
+THE SERVER IS: https://assignsde2.herokuapp.com/assign2
+THE SERVER IS: https://assignsde2.herokuapp.com/assign2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.1~~~~~~~~~~~~~~~STEP~3.1~~~~~~~~~~~~STEP~3.1~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #1 GET /person Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+[
+  {
+    "firstname": "Mr.0.23837442456123825",
+    "idPerson": 1,
+    "birthdate": "1994-02-10",
+    "activity": [{
+      "name": "Swimming",
+      "description": "Swimming in the lake",
+      "idActivity": 2,
+      "place": "Lake Tovel",
+      "type": "Social",
+      "startdate": "2013-10-30T00:00:00.0"
+    }],
+    "lastname": "Bianchi"
+  },
+  {
+    "firstname": "Paolo",
+    "idPerson": 3,
+    "birthdate": "1994-02-10",
+    "activity": [
+      {
+        "name": "Watch movies",
+        "description": "Whatch Harry Potter",
+        "idActivity": 5,
+        "place": "Milan",
+        "type": "Entertainment",
+        "startdate": "1999-09-26T00:00:00.0"
+      },
+      {
+        "name": "Running",
+        "description": "Running in the forest",
+        "idActivity": 4,
+        "place": "Trento",
+        "type": "Sport",
+        "startdate": "2000-11-02T00:00:00.0"
+      },
+      {
+        "name": "Party",
+        "description": "Organizing parties",
+        "idActivity": 6,
+        "place": "Home",
+        "type": "Social",
+        "startdate": "2005-02-30T00:00:00.0"
+      }
+    ],
+    "lastname": "Bianchi"
+  },
+  {
+    "firstname": "Roberto",
+    "idPerson": 7,
+    "birthdate": "1989-11-02",
+    "activity": [
+      {
+        "name": "Visiting",
+        "description": "Visiting a museum",
+        "idActivity": 8,
+        "place": "London",
+        "type": "Culture",
+        "startdate": "2007-12-30T00:00:00.0"
+      },
+      {
+        "name": "Football",
+        "description": "Goalkeeper in local team",
+        "idActivity": 9,
+        "place": "Napoli",
+        "type": "Sport",
+        "startdate": "2001-05-12T00:00:00.0"
+      }
+    ],
+    "lastname": "Negri"
+  },
+  {
+    "firstname": "Giovanni",
+    "idPerson": 10,
+    "birthdate": "1979-07-14",
+    "activity": [{
+      "name": "Videogames",
+      "description": "Playing videogames",
+      "idActivity": 11,
+      "place": "Home",
+      "type": "Entertainment",
+      "startdate": "2003-06-04T00:00:00.0"
+    }],
+    "lastname": "Verdi"
+  },
+  {
+    "firstname": "Damiano",
+    "idPerson": 12,
+    "birthdate": "1992-05-19",
+    "activity": [
+      {
+        "name": "Chat",
+        "description": "Chatting online",
+        "idActivity": 14,
+        "place": "Web",
+        "type": "Social",
+        "startdate": "2000-07-29T00:00:00.0"
+      },
+      {
+        "name": "Cycling",
+        "description": "Cycling at home",
+        "idActivity": 15,
+        "place": "Home",
+        "type": "Sport",
+        "startdate": "2017-11-02T00:00:00.0"
+      },
+      {
+        "name": "Learning a language",
+        "description": "Studying French",
+        "idActivity": 13,
+        "place": "School",
+        "type": "Culture",
+        "startdate": "2015-04-17T00:00:00.0"
+      }
+    ],
+    "lastname": "Guerra"
+  }
+]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.2~~~~~~~~~~~~~~~STEP~3.2~~~~~~~~~~~~STEP~3.2~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #2 GET /person/1 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+{
+  "firstname": "Mr.0.23837442456123825",
+  "idPerson": 1,
+  "birthdate": "1994-02-10",
+  "activity": [{
+    "name": "Swimming",
+    "description": "Swimming in the lake",
+    "idActivity": 2,
+    "place": "Lake Tovel",
+    "type": "Social",
+    "startdate": "2013-10-30T00:00:00.0"
+  }],
+  "lastname": "Bianchi"
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.3~~~~~~~~~~~~~~~STEP~3.3~~~~~~~~~~~~STEP~3.3~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #3 PUT /person/1 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+{
+  "firstname": "Mr.0.737010276414919",
+  "birthdate": "1994-02-10",
+  "lastname": "Bianchi"
+}
+===RESPONSE BODY===
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.4~~~~~~~~~~~~~~~STEP~3.4~~~~~~~~~~~~STEP~3.4~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #4 POST /person/ Accept: APPLICATION/JSON Content-Type: APPLICATION/XML
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+{
+  "firstname": "Giovanni",
+  "idPerson": 209,
+  "birthdate": "1979-07-14",
+  "activity": [{
+    "name": "Videogames",
+    "description": "Playing videogames",
+    "idActivity": 210,
+    "place": "Home",
+    "type": "Entertainment",
+    "startdate": "2003-06-04T00:00:00.0"
+  }],
+  "lastname": "Verdi"
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.5~~~~~~~~~~~~~~~STEP~3.5~~~~~~~~~~~~STEP~3.5~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #5 DELETE /person/209 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: No Content
+=> Http Status: 204
+===RESPONSE BODY===
+
+===========================================================
+===========================================================
+Request #1 GET /person/209 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 404
+===RESPONSE BODY===
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.6~~~~~~~~~~~~~~~STEP~3.6~~~~~~~~~~~~STEP~3.6~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #6 GET /activity_types Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+[
+  "Social",
+  "Sport",
+  "Culture",
+  "Entertainment",
+  "Work"
+]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.7~~~~~~~~~~~~~~~STEP~3.7~~~~~~~~~~~~STEP~3.7~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #7 GET /person/1/Social Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+[{
+  "name": "Swimming",
+  "description": "Swimming in the lake",
+  "idActivity": 2,
+  "place": "Lake Tovel",
+  "type": "Social",
+  "startdate": "2013-10-30T00:00:00.0"
+}]
+
+===========================================================
+===========================================================
+Request #7 GET /person/1/Sport Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: ERROR
+=> Http Status: 200
+===RESPONSE BODY===
+[]
+
+===========================================================
+===========================================================
+Request #7 GET /person/1/Culture Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: ERROR
+=> Http Status: 200
+===RESPONSE BODY===
+[]
+
+===========================================================
+===========================================================
+Request #7 GET /person/1/Entertainment Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: ERROR
+=> Http Status: 200
+===RESPONSE BODY===
+[]
+
+===========================================================
+===========================================================
+Request #7 GET /person/1/Work Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: ERROR
+=> Http Status: 200
+===RESPONSE BODY===
+[]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.8~~~~~~~~~~~~~~~STEP~3.8~~~~~~~~~~~~STEP~3.8~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #8 GET /person/1/Social/2 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+{
+  "name": "Swimming",
+  "description": "Swimming in the lake",
+  "idActivity": 2,
+  "place": "Lake Tovel",
+  "type": "Social",
+  "startdate": "2013-10-30T00:00:00.0"
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.10~~~~~~~~~~~~~STEP~3.10~~~~~~~~~~~STEP~3.10~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #10 PUT /person/1/Social/2 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 201
+===RESPONSE BODY===
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~STEP~3.11~~~~~~~~~~~~~STEP~3.11~~~~~~~~~~~STEP~3.11~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
+===========================================================
+Request #11 GET /person/3/Social?before=2006-02-30T00:00:00.0&after=1999-01-26T00:00:00.0 Accept: APPLICATION/JSON Content-Type: APPLICATION/JSON
+=> Result: OK
+=> Http Status: 200
+===RESPONSE BODY===
+[{
+  "name": "Party",
+  "description": "Organizing parties",
+  "idActivity": 6,
+  "place": "Home",
+  "type": "Social",
+  "startdate": "2005-02-30T00:00:00.0"
+}]
+
