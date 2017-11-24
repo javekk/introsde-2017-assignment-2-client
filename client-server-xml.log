@@ -17,7 +17,7 @@ Request #1 GET /person Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 <people>
     <person>
         <idPerson>1</idPerson>
-        <firstname>Mr.0.30040671224202864</firstname>
+        <firstname>Mr.0.03838525444704444</firstname>
         <lastname>Bianchi</lastname>
         <birthdate>1994-02-10</birthdate>
         <preferences>
@@ -149,7 +149,7 @@ Request #2 GET /person/1 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 <?xml version="1.0" encoding="UTF-16"?>
 <person>
     <idPerson>1</idPerson>
-    <firstname>Mr.0.30040671224202864</firstname>
+    <firstname>Mr.0.03838525444704444</firstname>
     <lastname>Bianchi</lastname>
     <birthdate>1994-02-10</birthdate>
     <preferences>
@@ -173,7 +173,7 @@ Request #3 PUT /person/1 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 => Http Status: 200
 <person>
     <birthdate>1994-02-10</birthdate>
-    <firstname>Mr.0.23837442456123825</firstname>
+    <firstname>Mr.0.18590911682614863</firstname>
     <lastname>Bianchi</lastname>
 </person>
 
@@ -204,13 +204,13 @@ Request #4 POST /person/ Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 ===RESPONSE BODY===
 <?xml version="1.0" encoding="UTF-16"?>
 <person>
-    <idPerson>207</idPerson>
+    <idPerson>209</idPerson>
     <firstname>Giovanni</firstname>
     <lastname>Verdi</lastname>
     <birthdate>1979-07-14</birthdate>
     <preferences>
         <activity>
-            <idActivity>208</idActivity>
+            <idActivity>210</idActivity>
             <name>Videogames</name>
             <description>Playing videogames</description>
             <place>Home</place>
@@ -224,14 +224,14 @@ Request #4 POST /person/ Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 ~~~STEP~3.5~~~~~~~~~~~~~~~STEP~3.5~~~~~~~~~~~~STEP~3.5~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ===========================================================
-Request #5 DELETE /person/207 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+Request #5 DELETE /person/209 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 => Result: ERROR
 => Http Status: 204
  
 ===RESPONSE BODY===
  
 ===========================================================
-Request #1 GET /person/207 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+Request #1 GET /person/209 Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 => Result: OK
 => Http Status: 404
  
@@ -305,6 +305,78 @@ Request #7 GET /person/1/Entertainment Accept: APPLICATION/XML Content-Type: APP
 
 ===========================================================
 Request #7 GET /person/1/Work Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+=> Result: ERROR
+=> Http Status: 200
+ 
+===RESPONSE BODY===
+<?xml version="1.0" encoding="UTF-16"?>
+<activities/>
+
+===========================================================
+Request #7 GET /person/12/Social Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+=> Result: OK
+=> Http Status: 200
+ 
+===RESPONSE BODY===
+<?xml version="1.0" encoding="UTF-16"?>
+<activities>
+    <activity>
+        <idActivity>14</idActivity>
+        <name>Chat</name>
+        <description>Chatting online</description>
+        <place>Web</place>
+        <type>Social</type>
+        <startdate>2000-07-29T00:00:00.0</startdate>
+    </activity>
+</activities>
+
+===========================================================
+Request #7 GET /person/12/Sport Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+=> Result: OK
+=> Http Status: 200
+ 
+===RESPONSE BODY===
+<?xml version="1.0" encoding="UTF-16"?>
+<activities>
+    <activity>
+        <idActivity>15</idActivity>
+        <name>Cycling</name>
+        <description>Cycling at home</description>
+        <place>Home</place>
+        <type>Sport</type>
+        <startdate>2017-11-02T00:00:00.0</startdate>
+    </activity>
+</activities>
+
+===========================================================
+Request #7 GET /person/12/Culture Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+=> Result: OK
+=> Http Status: 200
+ 
+===RESPONSE BODY===
+<?xml version="1.0" encoding="UTF-16"?>
+<activities>
+    <activity>
+        <idActivity>13</idActivity>
+        <name>Learning a language</name>
+        <description>Studying French</description>
+        <place>School</place>
+        <type>Culture</type>
+        <startdate>2015-04-17T00:00:00.0</startdate>
+    </activity>
+</activities>
+
+===========================================================
+Request #7 GET /person/12/Entertainment Accept: APPLICATION/XML Content-Type: APPLICATION/XML
+=> Result: ERROR
+=> Http Status: 200
+ 
+===RESPONSE BODY===
+<?xml version="1.0" encoding="UTF-16"?>
+<activities/>
+
+===========================================================
+Request #7 GET /person/12/Work Accept: APPLICATION/XML Content-Type: APPLICATION/XML
 => Result: ERROR
 => Http Status: 200
  
