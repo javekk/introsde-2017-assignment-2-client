@@ -291,9 +291,6 @@ public class XmlClient {
 		path = "person/" + lastPersonId;
 		body = " ";
 		result = strERROR;
-
-		activity_id = "";
-		activity_type = "";
 		for(String s : acTypesLsit) {
 			result = strOK;
 			String newPath = path + "/" + s;
@@ -306,8 +303,6 @@ public class XmlClient {
 				body = " ";
 			}
 			else {
-				activity_id =  idActivitis.item(0).getTextContent();
-				activity_type = s;
 			}
 			status = response.getStatus();
 			printRequestAsRequested(7, strGET, newPath, strAPPLICATIONXML, strAPPLICATIONXML, body, result,responseBody, status);
