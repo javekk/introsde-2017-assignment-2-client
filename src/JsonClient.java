@@ -279,8 +279,7 @@ public class JsonClient {
 		body = " ";
 		result = strERROR;
 
-		activity_id = 1;
-		activity_type = "";
+		
 		for(String s : acTypesLsit) {
 			result = strOK;
 			String newPath = path + "/" + s;
@@ -292,8 +291,6 @@ public class JsonClient {
 				body = " ";
 			}
 			else {
-				activity_id = (Integer) array_response.getJSONObject(0).get("idActivity");
-				activity_type = s;
 			}
 			status = response.getStatus();
 			printRequestAsRequested(7, strGET, newPath, strAPPLICATIONJSON, strAPPLICATIONJSON, body, result, responseBody,  status);
